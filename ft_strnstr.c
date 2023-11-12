@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:24:54 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/11 01:51:12 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/11 23:46:06 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *to_search, const char *to_find, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!to_search || len == 0)
-		return (NULL);
 	if (!to_find[0])
 		return ((char *)to_search);
 	tofind_len = ft_strlen(to_find);

@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 14:09:16 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/10 21:02:46 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/11 23:34:15 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *src)
 	int		src_len;
 	char	*dest;
 
-	if (!src)
-		return (NULL);
 	i = 0;
 	src_len = ft_strlen(src);
 	dest = malloc(sizeof(char) * (src_len + 1));
@@ -33,16 +31,3 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char *src = "";
-// 	char *dest = ft_strdup(src);
-// 	printf("%s", dest);
-// 	free(dest);
-// 	// printf("\n");
-// 	char *dest1 = ft_strdup(src);
-// 	printf("%s", dest1);
-// 	free(dest1);
-// 	return (0);
-// }
