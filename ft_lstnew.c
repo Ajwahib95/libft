@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 14:09:16 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/12 17:14:20 by awahib           ###   ########.fr       */
+/*   Created: 2023/11/12 21:07:01 by awahib            #+#    #+#             */
+/*   Updated: 2023/11/13 02:53:46 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+t_list	*ft_lstnew(void *content)
 {
-	int		i;
-	int		src_len;
-	char	*dest;
+	t_list *head;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	dest = malloc(sizeof(char) * (src_len + 1));
-	if (!dest)
-		return (0);
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	head = malloc(sizeof(t_list));
+	if (!head)
+		return (NULL);
+	head->content = content;
+	head->next = NULL;
+	return (head);
 }
+
+// #include <stdio.h>
+
+// int	main()
+// {
+// 	int data = 1337;
+// 	t_list *head = ft_lstnew(&data);
+// 	printf("%s", *(int *)head->content);
+// 	return 0;
+// }

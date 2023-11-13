@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:23:39 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/10 21:27:51 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/12 03:47:49 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main()
 // {
-//     char str[] = "./taha//.";
+//     char str[] = "./wah//.";
 //     char set[] = ".f/";
 //     char *new = ft_strtrim(NULL, set);
 //     if (new != NULL && new[0] == '\0') {

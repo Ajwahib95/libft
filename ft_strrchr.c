@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 21:53:34 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/12 00:46:57 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/12 17:25:15 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 			last_occurence = &str[i];
 		i++;
 	}
-	if ((unsigned char)c == 0)
+	if (c == 0)
 		return ((char *)&str[i]);
 	return ((char *)last_occurence);
 }

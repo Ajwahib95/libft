@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 20:01:16 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/10 20:58:01 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/13 02:34:46 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,14 +92,15 @@ char	**ft_split(char *str, char sep)
 	return (strs);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char **strings;
-// 	char *string = "  42 42 42  ";
+// 	char *string = " ";
 // 	char sep = ' ';
 // 	strings = ft_split(string, sep);
-// 	int i = 0;
-// 	// printf("%s", *strings);
+// 	// int i = 0;
+// 	printf("%s", *strings);
 // 	while (i < 3)
 // 	{
 // 		printf("%s", strings[i]);

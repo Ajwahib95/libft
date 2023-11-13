@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:19:55 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/11 00:13:36 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/13 03:17:30 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 // int main()
 // {
 //     // int i;
-//     int *arr = ft_calloc(2,2);
+//     int *arr = ft_calloc(9223372036854775807,1);
 //     printf("%ls", arr);
 //     // i = 0;
 //     // while (i < 4)

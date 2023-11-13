@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:35:02 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/10 19:33:50 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/12 17:21:19 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[i]);
 		i++;
 	}
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)&str[i]);
 	return (NULL);
 }
