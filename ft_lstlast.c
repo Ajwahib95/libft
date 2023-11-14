@@ -6,18 +6,18 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 05:40:23 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/13 11:24:28 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/14 20:08:58 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst)
-    {
-        while(lst->next)
-            lst = lst->next;
-    }
-    return (lst);
+	if (lst)
+	{
+		while (lst->next)
+			lst = lst->next;
+	}
+	return (lst);
 }

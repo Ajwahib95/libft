@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:39:02 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/13 02:44:29 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/14 20:07:44 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!(*lst))
 	{
-        *lst = new;
-        new->next = NULL;
+		*lst = new;
+		new->next = NULL;
 	}
 	new->next = *lst;
 	*lst = new;
