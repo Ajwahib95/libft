@@ -28,7 +28,7 @@ static char	**ft_free(char **str)
 	return (str);
 }
 
-static int	ft_countwords(char *str, char sep)
+static int	ft_countwords(char const *str, char sep)
 {
 	int	i;
 	int	count;
@@ -47,14 +47,14 @@ static int	ft_countwords(char *str, char sep)
 	return (count);
 }
 
-static int	ft_skip(char *str, char sep, int start)
+static int	ft_skip(char const *str, char sep, int start)
 {
 	while (str[start] && str[start] == sep)
 		start++;
 	return (start);
 }
 
-static char	**ft_wordcpy(char **strs, char *str, char sep)
+static char	**ft_wordcpy(char **strs, char const *str, char sep)
 {
 	int	start;
 	int	end;
@@ -79,14 +79,14 @@ static char	**ft_wordcpy(char **strs, char *str, char sep)
 	return ((strs[i] = NULL), strs);
 }
 
-char	**ft_split(char *str, char sep)
+char	**ft_split(char const *str, char sep)
 {
 	char	**strs;
 
 	strs = (char **)malloc(sizeof(char *) * (ft_countwords(str, sep) + 1));
 	if (!strs)
 		return (NULL);
-	if (!ft_countwords(str, sep))
+	if (!str || !ft_countwords(str, sep))
 		return ((strs[0] = NULL), strs);
 	strs = ft_wordcpy(strs, str, sep);
 	return (strs);
@@ -96,12 +96,10 @@ char	**ft_split(char *str, char sep)
 // int	main(void)
 // {
 // 	char **strings;
-// 	char *string = " ";
-// 	char sep = ' ';
-// 	strings = ft_split(string, sep);
-// 	// int i = 0;
-// 	printf("%s", *strings);
-// 	while (i < 3)
+// 	strings = ft_split("  tripouille  42  ", ' ');
+// 	int i = 0;
+// 	// printf("%s", *strings);
+// 	while (i < 2)
 // 	{
 // 		printf("%s", strings[i]);
 // 		printf("\n");
