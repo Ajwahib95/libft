@@ -80,23 +80,23 @@ RM	:= rm -f
 
 # Targets
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 all: ${NAME}
-
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJS}
 	${AR} $@ $^
 
 clean:
-	${RM} ${OBJS} ${BNSOBJS}
+	${RM} ${OBJS} ${BNSOBJS} 
 
 fclean: clean
 	${RM} ${NAME}
 	
 re: fclean all
 
+${BNSOBJS}: ${BNS}
+		${CC} ${CFLAGS} -c ${BNS}
+		${AR} ${NAME} ${BNSOBJS}
+
 bonus:	${BNSOBJS}
-	${AR} ${NAME} $^
