@@ -91,7 +91,7 @@ ${NAME}: ${OBJS}
 	${AR} $@ $^
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${BNSOBJS}
 
 fclean: clean
 	${RM} ${NAME}
