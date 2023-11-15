@@ -14,15 +14,26 @@
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	void	*ptr;
+	char	*ptr;
 	size_t	buffer;
 
-	buffer = nitems * size;
-	ptr = malloc(buffer);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, buffer);
-	return (ptr);
+	ptr = NULL;
+	if (nitems > 0 && size > 0)
+	{
+		buffer = nitems * size;
+		if (buffer / nitems != size)
+			return (NULL);
+		ptr = malloc(buffer);
+		if (!ptr)
+			return (NULL);
+		ft_bzero(ptr, buffer);
+	}
+	else if (nitems == 0 || size == 0)
+	{
+		ptr = malloc(1);
+		ptr[0] = 0;
+	}
+	return ((void *)ptr);
 }
 
 // int main()
