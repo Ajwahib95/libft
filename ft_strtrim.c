@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:23:39 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/12 03:47:49 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/16 22:28:52 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		newstr = ft_substr(s1, start, len);
 	return (newstr);
 }
-
-// int main()
-// {
-//     char str[] = "./wah//.";
-//     char set[] = ".f/";
-//     char *new = ft_strtrim(NULL, set);
-//     if (new != NULL && new[0] == '\0') {
-//     // The function returned an empty string
-//     printf("The function returned an empty string\n");
-//     } else if (new != NULL) {
-//     // The function returned a non-empty string
-//     printf("The function returned: \"%s\"\n", new);
-//     // Don't forget to free the memory when you're done with it
-//     } else {
-//     // The function returned NULL
-//     printf("The function returned NULL\n");
-//     printf("\n");
-//     }
-//     free(new);
-//     return (0);
-// }

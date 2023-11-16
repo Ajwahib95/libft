@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:03:20 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/10 21:03:09 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/16 22:28:30 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		newstr[j++] = s2[i++];
 	return ((newstr[j] = '\0'), newstr);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     char s1[7] = "wahib ";
-//     char s2[11] = "abdeljalil";
-//     char *newstr;
-//     newstr = ft_strjoin(s1, s2);
-//     printf("%s", newstr);
-//     return (0);
-// }

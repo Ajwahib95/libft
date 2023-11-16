@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 20:01:16 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/13 02:34:46 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/16 22:25:23 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,28 +83,13 @@ char	**ft_split(char const *str, char sep)
 {
 	char	**strs;
 
+	if (!str)
+		return (NULL);
 	strs = (char **)malloc(sizeof(char *) * (ft_countwords(str, sep) + 1));
 	if (!strs)
 		return (NULL);
-	if (!str || !ft_countwords(str, sep))
+	if (!ft_countwords(str, sep))
 		return ((strs[0] = NULL), strs);
 	strs = ft_wordcpy(strs, str, sep);
 	return (strs);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char **strings;
-// 	strings = ft_split("  tripouille  42  ", ' ');
-// 	int i = 0;
-// 	// printf("%s", *strings);
-// 	while (i < 2)
-// 	{
-// 		printf("%s", strings[i]);
-// 		printf("\n");
-// 		i++;
-// 	}
-// 	ft_free(strings);
-// 	return (0);
-// }

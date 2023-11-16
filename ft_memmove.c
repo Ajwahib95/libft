@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:53:47 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/12 01:07:19 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/15 22:45:03 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	if (dest == src)
 		return (dest);
-	if (dest <= src || dest >= (src + n))
+	if (dest < src || dest >= (src + n))
 		ft_memcpy(d, s, n);
 	else
 		while (n--)
