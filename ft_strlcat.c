@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:54:57 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/16 22:24:57 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/17 18:16:08 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	size_t	dest_len;
 	size_t	src_len;
 
+	if (!dest && !dstsize)
+		return (ft_strlen(src));
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = 0;

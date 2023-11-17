@@ -6,7 +6,7 @@
 /*   By: awahib <awahib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 05:10:10 by awahib            #+#    #+#             */
-/*   Updated: 2023/11/16 22:25:04 by awahib           ###   ########.fr       */
+/*   Updated: 2023/11/17 18:06:31 by awahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	length;
 
 	i = 0;
-	length = 0;
-	while (src[length])
-		length++;
+	length = ft_strlen(src);
 	if (dstsize < 1)
 		return (length);
 	while (src[i] && i < dstsize - 1)
@@ -28,7 +26,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (length);
 }
